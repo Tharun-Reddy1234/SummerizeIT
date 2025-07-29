@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summary</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <div class="summary-container">
+    <h2>🌐 Summary of Your Page</h2>
+    <div class="summary-box">
+      <p>{{ summary }}</p>
+    </div>
+    <form method="POST" action="/download">
+      <input type="hidden" name="summary" value="{{ summary }}">
+      <button name="format" value="word">📝 Export to Word</button>
+      <button name="format" value="csv">📊 Export to CSV</button>
+    </form>
+  </div>
+</body>
+</html>
